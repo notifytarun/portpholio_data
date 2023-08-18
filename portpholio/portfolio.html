@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tarun miri</title>
+      <!-- icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      <!-- @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"); -->
+
+        <link rel="stylesheet" href="main.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+
+</script>
+<script>
+  var user = "{{request.user}}";
+
+function getCookies(name) {
+let cookieValue = null;
+if (document.cookie && document.cookie !== '') {
+const cookies = document.cookie.split(';');
+for (let i = 0; i < cookies.length; i++) {
+  const cookie = cookies[i].trim();
+  // Does this cookie string begin with the name we want?
+  if (cookie.substring(0, name.length + 1) === (name + '=')) {
+    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+    break;
+  }
+}
+}
+return cookieValue;
+}
+var csrftoken = getCookies('csrftoken');
+</script>
+        <script>
+            $(document).ready(function(){
+              $("a").click(function(){
+                $("sidebar").hide();
+                $("bar").show();
+                $("navbar").show();
+                
+              });
+              $('bar').click(function(){
+                $('sidebar').show()
+                $("bar").hide();
+                $("navbar").hide();
+              });
+              $("hidebar").click(function(){
+                $("sidebar").hide();
+                $("bar").show();
+                $("navbar").show();
+                
+              });
+              $("header").click(function(){
+                $("sidebar").hide();
+                $("bar").show();
+                $("navbar").show();
+                
+              });
+              $("img").dblclick(function(){
+                 $a = ($(this).attr("src"));
+                
+                
+                 $("#wideimg").attr("src",$a);
+                 $("#project").hide();
+                $("clickhide").show();
+                
+
+                
+              });
+              $("back").click(function(){
+                $("clickhide").hide()
+                $("#project").show();
+                
+              });
+              
+              
+              
+            });
+            </script>
+        <script>
+            tailwind.config = {
+              theme: {
+                screens: {
+      'xs': '100px',},
+                extend: {
+                  width:{
+                    clickbox:'900px',
+                    xs:'20px'
+
+                  },
+                  colors: {
+                    clifford: '#da373d',
+                    'tarun':'#28e98c',
+                  }
+                }
+              }
+            }
+          </script>
+          <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+            body{
+            @apply bg-[#1f1f1f] text-slate-400
+        }
+          </style>
+          <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+          
+         
+          <script>
+            //landing page animation 3sec
+              
+            const myTimeout = setTimeout(myGreeting, 2500);
+            const myTime1 = setTimeout(myGreeting1, 700);
+            const myTime2 = setTimeout(myGreeting2, 1400);
+            const myTime3 = setTimeout(myGreeting3, 2100);
+            function myGreeting1() {
+              document.getElementById("tog1").style="background-color:white";
+              
+            
+            }
+            function myGreeting2() {
+              document.getElementById("tog2").style="background-color:white";
+              document.getElementById("tog1").style="background-color:black";
+              
+            
+            }
+            function myGreeting3() {
+              document.getElementById("tog3").style="background-color:white";
+              document.getElementById("tog2").style="background-color:black";
+              document.getElementById("tog1").style="background-color:black";
+              
+            
+            }
+            
+           
+            function myGreeting() {
+              document.getElementById("landing").classList.add("hidden");
+              document.getElementById("show").classList.remove("hidden");
+            
+            }
+            
+                     </script>
+
+    </head>
+   
+  <body>
+
+    <!-- landing page animation -->
+    <div id="landing" class=" w-40 h-10 mt-[25%] ml-[45%]"> 
+      
+       
+      <div id="dot" class="flex gap-2.5">
+        
+          <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce toggle w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+            </svg></div>
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+            </svg></div>
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+            </svg></div>
+            
+      </div>
+      <div class="flex ml-1.5  gap-7">
+        <div id="tog1" class="border-1 rounded-full h-2 w-2 bg-slate-400 ">
+          
+        </div>
+        <div id="tog2" class="border-1 rounded-full h-2 w-2 ">
+          
+        </div>
+        <div id="tog3" class="border-1 rounded-full h-2 w-2 ">
+          
+        </div>
+          
+      </div>
+  
+      </div>
+      <!-- end of landing page animation -->
+
+
+
+
+    <!-- webpage show -->
+  <div id="show" class="hidden">
+      
+
+     
+      
+        
+        <sidebar id="sidebar"class="hidden sidebar ">
+            <div class='fixed bg-black text-slate-400 overflow-auto font-bold top-0 pt-10 right-0 border-2 shadow-lg border-black w-60 h-full'>
+                <h1 class="text-2xl ml-20 pb-7 ">Menu</h1>
+                <ul class="text-center">
+                    <li  class='pb-4 w-full p-4 ' > <a class="flex flex-inline"  href="#home" class="flex flex-inline" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" w-6 hover:text-green-500 ml-16 h-6">
+                        <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                        <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                      </svg> Home</a></li>
+                    <li class='pb-4 w-full p-4' >  <a class="flex flex-inline"  id="1"  href="#about" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class=" w-6 ml-16 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+                      </svg>About</a></li>
+                    <li  class='pb-4 w-full p-4' >  <a class="flex flex-inline"  id="2" href="#skills" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class=" w-6 ml-16 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                      </svg>Skills</a></li>
+                    <li id="3" class='pb-4 w-full p-4' > <a class="flex flex-inline"  href="#project" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class=" w-6 ml-16 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
+                      </svg>Projects</a></li>
+                    <li id="4" class='pb-4 w-full p-4' >  <a class="flex flex-inline"  href="#contact" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class=" w-6 ml-16 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                      </svg>Contact</a></li>
+                </ul>
+        
+            </div>
+        </sidebar>
+        <div >
+            <bar id="bar" class="border-1 rounded-full lg:absolute fixed right-10 top-10 w-14 h-14 hover:border-green-500  ">
+                <div class="border-2  w-6 mx-3 mt-4 mb-1 border-inherit">
+
+                </div>
+                <div class="border-2  w-6 mx-3 border-inherit ">
+
+                </div>
+
+
+            </bar>
+        </div>
+        
+        <header>
+            <div id="profile"class='border-x rounded-3xl border-slate-300 break-words  lg:w-80 h-[660px] lg:ml-5 lg:fixed top-2 py-10 profile transition '>
+                <div class="profile-name flex  ">
+                    <div class="text-4xl text-slate-300 font-bold flex ml-[7%]">Tarun  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="ml-2 hover:fill-red-300  transition ease-in-out delay-150  hover:-translate-y- hover:scale-150  duration-300" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                    </svg></div>
+                    <div class="text-slate-300   lg:mr-3 mr-7  ml-auto ">Full Stack & <br />Python Developer</div>
+                </div>
+                <div class="mt-[5%]">
+                    <img style="object-fit:cover ;" class='rounded-3xl w-40 h-40 'src='image/profile-tarun.jpg' />
+                    <h1 class="text-2xl text-slate-300 my-10">Hello<br /> tarunmiri49@gmail.com</h1>
+                    <div class="my-8"><i class="bi bi-brush-fill"></i> Designed by Me 2023</div>
+                    <div>
+                        <ul class="flex lg:m-5 lg:mx-14 md:gap-[30%] gap-[28%] lg:gap-[10%]  mx-[15%]">
+                            <li class="hover:border-[#28e98c] rounded-full border-2 h-14 w-14 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="m-3 icon" viewBox="0 0 16 16">
+                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg></li>
+                            <li class="hover:border-[#28e98c] rounded-full border-2 h-14 w-14"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="m-3 " viewBox="0 0 16 16">
+                              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                            </svg></li>
+                            <li class="hover:border-[#28e98c] rounded-full border-2 h-14 w-14"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="m-3 " viewBox="0 0 16 16">
+                              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg></li>
+                        </ul>
+                    </div>
+                    <div class="border-2 ml-[10%] text-slate-900 hover:font-bold border-green-500 h-12 m-7 w-4/5 text-center pt-2 hover:bg-slate-950 hover:font-bold hover:text-green-500 bg-[#28e98c] rounded-full">CONTACT ME!</div>
+                </div>
+            </div>    
+        </header>
+
+        
+
+        <navbar id="navdesk" class="text-center";>
+            <div class='fixed rounded-3xl  lg:right-9 border-x lg:top-40 w-10 pl-1.5 h-[300px]'>
+                <ul class="hidesidebar  pt-8">
+                    <li class='pb-6' > <a href="#home"  ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 hover:text-green-500 h-6">
+                        <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                        <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                      </svg></a></li>
+                    <li class='pb-8' >  <a href="#about" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 hover:text-green-200 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+                      </svg>
+                      </a></li>
+                    <li class='pb-8' > <a href="#skills" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 hover:text-green-300 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                      </svg>
+                       
+                      </a></li>
+                    <li class='pb-8' > <a href="#project" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 hover:text-green-400 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
+                      </svg>
+                      </a></li>
+                    <li class='pb-8' >  <a href="#contact" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 hover:text-green-500 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                      </svg>
+                      </a></li>
+                </ul>
+        
+            </div>
+        </navbar>
+
+        
+          <hidebar>
+            
+
+        <div class="lg:ml-96 lg:mr-40 body" id="active">
+
+            <section id="home">
+                <div class=' p-3 sm:h-full'><div class="border-y h-8 rounded-full w-32 text-center text-slate-100 pt-1 text-sm flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 hover:text-green-500 h-6 pl-2 pb-1 ">
+                    <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                    <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                  </svg>INTRODUCE</div>
+                    <div class='mt-10'><div class='text-7xl'>Say Hi from <i class="text-green-500">Tarun</i>, Python and Backend Developer</div><br />
+                    Coder and governing the backed codes and provide better security.
+                    </div>
+                        <div class="">
+                            <a href="#project">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-10 h-10 absolute  right-40 mt-40">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                                </svg>
+                                <img class="absolute  p-2 h-42 w-44 right-24 mt-20 tarun"src="round-text.png" /></div>
+                            </a>
+                </div>
+
+            </section>
+
+            <section id="about">
+                <div class='mt-36 p-3 sm:h-full'><div class="border-y h-8 rounded-full w-24 text-center text-slate-100 pt-1 text-sm flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 pl-2 pb-1">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+                  </svg>ABOUT</div>
+                    <div class='mt-10'><div class='text-4xl'>I love <span class="text-green-500">Coding.</span>Python and Backend Developer</div><br />
+                    I searching for opportunities to give value addition to the world.Actually, I like to visit new places and cooking.My mom says that I
+                    am a great cook but you know she is mom.
+
+                    Being a part of the open is graet exprience so that the new one skills and tools are required those open source, I like to find problem solutions.<br />
+
+                    I also like playing Cricket because in our india the craz of the Cricket's fan is huge and all around the player merge in One League that is IPL.
+                    </div>
+                </div>
+
+            </section>
+
+            <section  id="skills">
+                <div class='p-3 my-40 overflow-hidden' >
+                    <div class="border-y h-8 rounded-full w-24 text-center text-slate-100 pt-1 text-sm flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 pl-2 pb-1">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                      </svg>SKILLS</div>
+                        <br></br>
+                    
+                    <div id="python"class='grid grid-cols-2 gap-24 place-items-center md:grid-cols-4 python'>
+                        <div class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center '><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                          <svg  viewBox="0 0 64 64" fill="none"  class="w-24 h-40 ml-7"xmlns="http://www.w3.org/2000/svg"><path d="M31.885 16c-8.124 0-7.617 3.523-7.617 3.523l.01 3.65h7.752v1.095H21.197S16 23.678 16 31.876c0 8.196 4.537 7.906 4.537 7.906h2.708v-3.804s-.146-4.537 4.465-4.537h7.688s4.32.07 4.32-4.175v-7.019S40.374 16 31.885 16zm-4.275 2.454c.771 0 1.395.624 1.395 1.395s-.624 1.395-1.395 1.395a1.393 1.393 0 0 1-1.395-1.395c0-.771.624-1.395 1.395-1.395z" fill="url(#a)"/><path d="M32.115 47.833c8.124 0 7.617-3.523 7.617-3.523l-.01-3.65H31.97v-1.095h10.832S48 40.155 48 31.958c0-8.197-4.537-7.906-4.537-7.906h-2.708v3.803s.146 4.537-4.465 4.537h-7.688s-4.32-.07-4.32 4.175v7.019s-.656 4.247 7.833 4.247zm4.275-2.454a1.393 1.393 0 0 1-1.395-1.395c0-.77.624-1.394 1.395-1.394s1.395.623 1.395 1.394c0 .772-.624 1.395-1.395 1.395z" fill="url(#b)"/><defs><linearGradient id="a" x1="19.075" y1="18.782" x2="34.898" y2="34.658" gradientUnits="userSpaceOnUse"><stop stop-color="#387EB8"/><stop offset="1" stop-color="#366994"/></linearGradient><linearGradient id="b" x1="28.809" y1="28.882" x2="45.803" y2="45.163" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE052"/><stop offset="1" stop-color="#FFC331"/></linearGradient></defs></svg>
+                        
+                        <div  class="text-3xl text-green-500 relative bottom-7">85%</div>
+                      <h1 class="pt-7 text-slate-200">Python</h1> 
+                      </div>
+                        
+                        <div id="django" class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center django'>
+                          <svg viewBox="0 0 32 32" class="w-24 h-24 pl-7 mt-7 ml-3 " xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_django</title><path d="M14.135,4H18.1V22.169a26.218,26.218,0,0,1-5.143.535c-4.842-.005-7.362-2.168-7.362-6.322,0-4,2.673-6.6,6.816-6.6a6.448,6.448,0,0,1,1.724.2V4Zm0,9.142a3.992,3.992,0,0,0-1.337-.2c-2,0-3.163,1.223-3.163,3.366,0,2.087,1.107,3.239,3.138,3.239a9.355,9.355,0,0,0,1.362-.1v-6.3Z" style="fill:#44b78b"></path><path d="M24.4,10.059v9.1c0,3.133-.235,4.639-.923,5.938A6.316,6.316,0,0,1,20.237,28l-3.678-1.733A5.708,5.708,0,0,0,19.7,23.638c.566-1.121.745-2.42.745-5.837V10.059Z" style="fill:#44b78b"></path><rect x="20.441" y="4.02" width="3.964" height="4.028" style="fill:#44b78b"></rect></g></svg>
+                        
+                          <div class="text-3xl text-green-500 relative ">90%</div>
+
+                          <h1 class="pt-16 text-slate-200">Django</h1> 
+                        </div>
+                        <div id="drf" class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center drf'>
+                          <svg viewBox="0 0 128 128" class="w-24 h-24 pl-7 mt-7  ml-4" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m64.347 41.619v4.2915h-19.475l-0.02875-0.02794-0.02794 0.02794h-38.119a0.069444 0.069444 0 0 0-0.069437 0.06944v18.955h-6.127v0.41662h6.127v18.717a0.069444 0.069444 0 0 0 0.069437 0.06944h18.837v8.5399h0.41662v-8.5399h18.685v0.06971h0.11039l0.0971 0.09737 0.10063-0.09737h0.1085v-0.06971h19.295v3.0463h0.41662v-3.0463h19.377v0.06971h0.1085l0.10063 0.09737 0.0971-0.09737h0.11039v-0.06971h18.674v4.1551h0.41662v-4.1551h18.849a0.069444 0.069444 0 0 0 0.0694-0.06944v-18.717h4.9341v-0.41662h-4.9341v-18.955a0.069444 0.069444 0 0 0-0.0694-0.06944h-18.849v-0.01302h-0.41662v0.01302h-18.853l-0.02794-0.02794-0.02875 0.02794h-19.557v-4.2915zm-57.484 4.4304h18.67v18.709zm19.087 0h18.685v0.040415l-18.685 18.656zm19.102 0h19.295v18.706l-19.295-18.671zm19.712 0h19.377v0.03553l-19.377 18.75zm19.793 0h18.674v18.685l-18.674-18.645zm19.09 0h18.682l-18.682 18.721zm-96.882 0.09846 18.747 18.787h-18.747zm115.66 0v18.787h-18.747zm-77.375 0.13019 19.28 18.657h-19.28zm39.088 0v18.657h-19.28zm-39.505 0.0081v18.648h-18.677zm39.922 0 18.674 18.645v0.0035h-18.674zm-77.791 19.065h18.578l-18.578 18.55zm19.359 0h18.51v18.549zm18.927 0h19.178l-19.178 18.558zm19.911 0h19.178v18.558zm19.595 0h18.51l-18.51 18.549zm19.09 0h4e-3l18.676 18.648h-18.681zm0.20099 0h18.578v18.55zm-39.085 0.0011 19.27 18.647h-19.27zm-39.23 0.0062v18.64h-18.669zm0.41662 0.01383 18.588 18.626h-18.588zm77.281 0.01139v18.615h-18.576zm-38.884 0.04774v18.567h-19.188z" fill="#cecece"  class="w-24 h-40" />
+                            <path d="m64.556 51.492c-0.36077 0-0.72168 0.13743-0.99653 0.41228-0.52992 0.52992-0.54737 1.3783-0.0556 1.9312l-33.827 19.228 0.03608 0.06076c2.157 3.643 4.7912 6.9835 8.055 9.9235l0.05208 0.04692 0.04638-0.05235 25.746-29.097c0.55266 0.50018 1.4076 0.48539 1.9404-0.04747 0.54971-0.54971 0.54971-1.4431 0-1.9928-0.27485-0.27486-0.63549-0.41228-0.99626-0.41228zm0 0.13806c0.32494 0 0.64975 0.12409 0.89807 0.37241 0.49664 0.49664 0.49664 1.2998 0 1.7964-0.49664 0.49664-1.2998 0.49664-1.7964 0-0.49664-0.49664-0.49664-1.2998 0-1.7964 0.24832-0.24832 0.5734-0.37241 0.89834-0.37241zm48.339 0.42639v0.13887h1.5501v30.911h-1.5501v0.13887h3.2389v-0.13887h-1.5498v-30.911h1.5498v-0.13887zm-93.671 0.51291-0.06944 3e-3h-3e-3c-0.0235 1e-3 -0.04704 0.0022-0.07052 0.0035l-0.06537 0.0038v4.1144l0.07676-0.0081c0.02056-0.0022 0.04144-0.0036 0.06211-0.0038h2.77e-4c0.35722 1.39e-4 0.64528 0.28829 0.64528 0.64555 7e-6 0.35726-0.28805 0.64541-0.64528 0.64555-0.02094-4.4e-5 -0.04209-0.0012-0.06293-0.0033l-0.07622-0.0076v4.1152l0.06645 3e-3c0.02348 9.72e-4 0.04703 0.0018 0.07052 0.0024h0.001934c2.6255 4.9e-5 4.7554-2.1298 4.7554-4.7553 4.8e-5 -2.6017-2.0932-4.7102-4.6859-4.7483zm-0.06835 0.14186c2.5499 5.56e-4 4.6154 2.0664 4.6154 4.6165 4.7e-5 2.5503-2.0657 4.6162-4.6159 4.6165-1.39e-4 -4e-6 -4.17e-4 6e-6 -5.55e-4 0v-3.8321c0.43241 1e-5 0.78443-0.35202 0.78442-0.78442 8e-6 -0.43241-0.35202-0.78443-0.78442-0.78442v-3.8318c4.16e-4 -1.7e-5 6.94e-4 -2.5e-4 0.0011-2.78e-4zm59.98 0.19149v0.0035c-1.3819 0.03719-2.493 1.1678-2.493 2.5586s1.1111 2.5214 2.493 2.5586v13.596c-2e-3 -6e-6 -4e-3 -2.78e-4 -6e-3 -2.78e-4 -1.4143-3e-6 -2.5621 1.1479-2.5621 2.5621-1e-6 1.4143 1.1479 2.5624 2.5621 2.5624 1.4143 0 2.5624-1.1481 2.5624-2.5624 0-1.3653-1.071-2.4792-2.4175-2.5548v-13.603c1.3819-0.03719 2.4927-1.1678 2.4927-2.5586s-1.1108-2.5214-2.4927-2.5586v-0.0035zm0 0.1424v4.8394c-1.3067-0.03704-2.3541-1.104-2.3541-2.4197 0-1.3158 1.0473-2.3827 2.3541-2.4197zm0.13887 0c1.3067 0.03704 2.3538 1.104 2.3538 2.4197 0 1.3158-1.0471 2.3827-2.3538 2.4197zm-16.016 1.0896-25.448 28.76c-3.21-2.902-5.8079-6.1934-7.9402-9.7825zm-31.086 0.85332v3.2389h0.13887v-1.5499h6.5648v1.5499h0.13887v-3.2389h-0.13887v1.5501h-6.5648v-1.5501zm24.894 12.705v0.13887h1.5501v10.069h-1.5501v0.13887h3.2389v-0.13887h-1.5499v-10.069h1.5499v-0.13887zm22.063 4.0645c2e-3 -1e-6 4e-3 2.78e-4 6e-3 2.78e-4v4.8462c-2e-3 5e-6 -4e-3 2.77e-4 -6e-3 2.77e-4 -1.3392 0-2.4232-1.0843-2.4232-2.4235 0-1.3392 1.084-2.4232 2.4232-2.4232zm0.14484 0.0073c1.2713 0.07521 2.2787 1.1256 2.2787 2.4159 0 1.2903-1.0074 2.341-2.2787 2.4162zm13.243 0.43561v3.2389h0.13887v-1.5501h12.023v1.5501h0.13887v-3.2389h-0.13887v1.5499h-12.023v-1.5499z" fill="#6c6c6c"  class="w-24 h-40"/>
+                            <path d="m81.067 45.112c-0.09946-8.89e-4 -0.19843-4.58e-4 -0.29674 0.0011-1.5153 0.02396-4.7619 0.01795-7.6695 1.334-2.9076 1.316-5.4641 4.0435-5.4641 9.2476 0 2.1998 0.73464 4.101 1.8867 5.7299h-23.211v-10.511h15.238v-5.3507h-21.365v5.3507h0.0016v10.511h-0.0016v5.351h0.0016v12.456l-3.5798-0.02143-4.9539 0.02278-7.755-12.048c1.8177-0.74956 3.5966-1.8279 4.9658-3.3387 1.4892-1.6432 2.4864-3.7902 2.4864-6.4468v-0.76408c0-3.8875-1.4825-6.6762-3.9001-8.4542-2.4176-1.778-5.7247-2.5638-9.4006-2.6476h-11.8v5.4112h0.030159v12.708h-0.030108v5.0513h0.030108v15.854h6.1256v-15.87l6.1604-0.01736 8.4575 13.759 0.01193 0.016c0.71617 0.94845 2.2048 3.0543 4.6105 4.5709l0.2037 0.12857 4.8617-2.564 3.8936-0.02333h20.944v-5.5609h-15.237v-12.222h30.129c0.01106 0.0052 0.01931 0.0092 0.03119 0.01465 1.8665 0.85339 4.132 1.6256 5.8956 2.7382 1.7636 1.1125 2.9969 2.4888 2.9969 4.6753 0 2.3534-1.0619 3.5857-2.5589 4.3336s-3.4534 0.93306-5.064 0.93306h-0.0028c-3.087 0.01916-6.7181-1.2924-9.8188-2.3278l-0.54844-0.18309v5.8834l0.24384 0.11121c3.0434 1.3874 7.5514 1.9289 10.135 1.8306 1.8531-9.72e-4 5.2375-0.36382 8.225-1.8591 2.9915-1.4972 5.5845-4.2095 5.5845-8.7219 0-3.492-1.3144-5.9958-3.1534-7.7878-1.839-1.7919-4.1825-2.8912-6.2751-3.7065l-8.19e-4 -2.78e-4 -5.42e-4 -2.78e-4c-0.7937-0.30608-2.299-0.9071-3.7957-1.7218-1.4944-0.81348-2.9719-1.8536-3.7103-2.944-0.4595-0.74598-0.74286-1.5768-0.79256-2.3617 0.0044-2.3794 1.1134-3.6626 2.5496-4.4196 1.4391-0.75844 3.2316-0.91934 4.4019-0.83487 2.3554 0.17001 6.4131 1.4988 7.711 2.053l0.4131 0.1763 0.60079-1.7649h16.244v33.667h6.1256v-33.667h11.011v-5.3038h-11.011v-0.0236h-6.1256v0.0236h-21.167c-1.1756-0.28384-2.3573-0.46504-3.5188-0.47548zm-0.0076 0.83324c1.0998 0.0099 2.2408 0.18255 3.3897 0.46355l0.04882 0.01194h22.089v-0.0236h4.4592v0.0236h11.011v3.6373h-11.011v33.667h-4.4592v-33.667h-17.674l-0.50938 1.497c-1.6373-0.6495-5.1548-1.7857-7.5586-1.9592-1.3007-0.09389-3.2078 0.06293-4.8506 0.92872-1.6427 0.86579-2.9953 2.5105-2.9953 5.1701v0.01248l8.19e-4 0.01275c0.05757 0.9537 0.39266 1.914 0.92221 2.7704l0.0043 0.0071 0.0046 0.0068c0.88251 1.3074 2.4554 2.3702 4.0067 3.2147 1.5514 0.84447 3.0889 1.4569 3.8939 1.7674 2.0511 0.79916 4.2887 1.8638 5.9949 3.5264 1.7066 1.6629 2.9017 3.9047 2.9017 7.1911 0 4.1997-2.3126 6.5696-5.1242 7.9768-2.8117 1.4072-6.1217 1.7715-7.8608 1.7715h-0.0081l-0.0079 2.78e-4c-2.3569 0.09074-6.6803-0.44192-9.5207-1.6597v-4.1757c2.9689 1.0013 6.4059 2.2062 9.5395 2.1867 1.6703-1.38e-4 3.7322-0.17082 5.4337-1.0209 1.7024-0.85056 3.0197-2.4597 3.0197-5.0789 0-2.5097-1.4992-4.1903-3.3856-5.3803-1.8864-1.19-4.1886-1.9658-5.9936-2.791-0.0316-0.01445-0.06825-0.03215-0.11012-0.05153l-0.08327-0.03852h-31.147v13.888h15.237v3.8944h-20.114l-4.0998 0.02441-4.6062 2.4292c-2.1169-1.3966-3.4676-3.2698-4.1844-4.2199l-8.681-14.122-7.4585 0.02061v15.868h-4.4592v-15.854h-0.030108v-3.3848h0.030108v-14.375h-0.030108v-3.7447h10.948c3.5677 0.08126 6.7076 0.85422 8.9259 2.4856 2.2183 1.6314 3.5605 4.1028 3.5605 7.7829v0.76408c0 2.4505-0.89759 4.3723-2.2705 5.8872-1.3729 1.5149-3.2316 2.6104-5.1196 3.3248l-0.4798 0.18161c2.8628 4.4171 5.7035 8.8487 8.5524 13.275l5.4069-0.02495 4.4136 0.02631v-14.127h-0.0016v-3.6845h0.0016v-12.178h-0.0016v-3.6842h19.699v3.6842h-15.238v12.178h25.726l-0.55902-0.68108c-1.3488-1.6431-2.1767-3.5777-2.1767-5.8821 0-4.9391 2.2818-7.2701 4.9742-8.4887 2.6924-1.2186 5.8075-1.2354 7.3392-1.2596 0.09212-0.0015 0.18424-0.0019 0.27612-0.0011zm-69.487 4.1665v14.375h5.0564c2.1262 0 4.3615-0.31202 6.1129-1.3668 1.7514-1.0547 2.9736-2.9004 2.9736-5.7199v-0.76408c0-2.8548-1.6037-4.5536-3.3362-5.4513-1.7325-0.89779-3.5777-1.0725-4.3387-1.0725zm0.83324 0.83324h5.6347c0.62035 0 2.4042 0.17503 3.9555 0.9789 1.5513 0.80387 2.8862 2.1587 2.8862 4.7117v0.76408c0 2.5883-1.0288 4.0777-2.5703 5.006s-3.6409 1.2474-5.683 1.2474h-4.2232z" fill="#7f2d2d"/>
+                            <path d="m12.074 28.415a0.13889 0.13889 0 0 0-0.13887 0.13887v2.7444c0 0.14744 0.0092 0.33363 0.02685 0.56092 0.0075 0.09593 0.01505 0.14935 0.02251 0.22838-0.10936-0.12435-0.20838-0.25643-0.3442-0.36102-0.21961-0.17329-0.47933-0.30974-0.77655-0.40984-0.30238-0.10184-0.65005-0.15108-1.0426-0.15108-0.93303 0-1.7021 0.31987-2.2705 0.95259-0.57313 0.63368-0.85006 1.5614-0.85006 2.762 0 1.1879 0.27019 2.1055 0.83026 2.7311a0.13889 0.13889 0 0 0 2.778e-4 2.78e-4c0.5605 0.62095 1.3297 0.93333 2.2705 0.93333 0.40109 0 0.75289-0.04911 1.0557-0.15108a0.13889 0.13889 0 0 0 0.0011-2.77e-4c0.30145-0.10434 0.56336-0.24484 0.78307-0.42259l2.78e-4 -2.78e-4c0.15299-0.12138 0.26388-0.26659 0.38055-0.40848l0.12504 0.74211a0.13889 0.13889 0 0 0 0.13698 0.11582h0.88017a0.13889 0.13889 0 0 0 0.13887-0.13887v-9.7274a0.13889 0.13889 0 0 0-0.13887-0.13887zm4.1147 0.31274c-0.21589 0-0.41232 0.06873-0.56472 0.2037-0.15962 0.14108-0.23082 0.35882-0.23082 0.61652 0 0.25398 0.07168 0.47058 0.22893 0.6149a0.13889 0.13889 0 0 0 0.0016 0.0016c0.15243 0.13508 0.34902 0.20397 0.56499 0.20397 0.20801 0 0.39953-0.0698 0.55061-0.20316 0.16622-0.14284 0.2452-0.36191 0.2452-0.61734 0-0.25872-0.07859-0.47866-0.24656-0.61815-0.1509-0.13266-0.3418-0.20207-0.54926-0.20207zm21.769 2.2974c-0.59268 0-1.1051 0.09405-1.5347 0.28751-0.42877 0.19308-0.76444 0.47963-0.99382 0.85359-0.2301 0.37098-0.34257 0.81766-0.34258 1.3296 0 0.4858 0.12341 0.92213 0.37106 1.2957a0.13889 0.13889 0 0 0 0.0011 0.0016c0.2028 0.29669 0.47137 0.50851 0.77438 0.66833-0.2149 0.14386-0.3997 0.29306-0.5262 0.45595a0.13889 0.13889 0 0 0-5.56e-4 2.78e-4c-0.16273 0.21121-0.24547 0.4645-0.24547 0.74129 0 0.24472 0.0773 0.47133 0.22675 0.66101a0.13889 0.13889 0 0 0 0.0014 0.0016c0.07898 0.097 0.16842 0.18005 0.265 0.25225-0.38353 0.1191-0.72122 0.287-0.96724 0.546a0.13889 0.13889 0 0 0-8.33e-4 8.19e-4c-0.30688 0.32804-0.46436 0.73512-0.46436 1.1951 0 0.6432 0.28692 1.1681 0.8308 1.5225 1.39e-4 1.07e-4 4.16e-4 1.66e-4 5.55e-4 2.77e-4l2.78e-4 2.78e-4c0.54504 0.35884 1.3011 0.52864 2.2629 0.52864 1.2413 0 2.2032-0.20202 2.8846-0.6271 0.68114-0.42491 1.0372-1.064 1.0372-1.8621 0-0.63231-0.23149-1.1422-0.68569-1.4801l-5.55e-4 -2.78e-4c-0.44943-0.3375-1.0807-0.49637-1.8827-0.49637h-1.2678c-0.22012 0-0.40548-0.01637-0.55468-0.04692-0.14441-0.03366-0.24505-0.08412-0.30894-0.14132-0.05428-0.05211-0.0811-0.11287-0.0811-0.21672 0-0.1504 0.04274-0.27318 0.13318-0.38733 0.09282-0.11184 0.23878-0.21972 0.42422-0.32088 0.19554 0.02818 0.38886 0.04692 0.57801 0.04692 0.87126 0 1.5746-0.20668 2.0912-0.63198a0.13889 0.13889 0 0 0 5.56e-4 -2.78e-4c0.5156-0.42886 0.77927-1.022 0.77927-1.7384 0-0.29372-0.04621-0.56556-0.1405-0.81236-0.06238-0.16329-0.15239-0.2906-0.2376-0.42422l1.1224-0.13236a0.13889 0.13889 0 0 0 0.1226-0.13779v-0.66882a0.13889 0.13889 0 0 0-0.13887-0.13887h-2.4566c-0.08928-0.02418-0.18724-0.04484-0.29945-0.06076-0.1231-0.02161-0.25236-0.03644-0.38733-0.04503h-5.55e-4c-0.12977-0.01262-0.25952-0.01926-0.3895-0.01926zm-15.918 0.02496c-0.47536 0-0.92977 0.05777-1.3624 0.17359-0.42747 0.11443-0.80802 0.25274-1.1416 0.41581a0.13889 0.13889 0 0 0-0.06673 0.17902l0.33471 0.78768a0.13889 0.13889 0 0 0 0.18607 0.07188c0.30045-0.1389 0.61842-0.25966 0.95422-0.3621 0.32789-0.10003 0.6729-0.15027 1.0367-0.15027 0.46341 0 0.80166 0.1114 1.0375 0.32115 0.22429 0.19948 0.35396 0.56938 0.35396 1.1403v0.28534l-1.108 0.04475c-1.1777 0.03389-2.0668 0.23306-2.6703 0.62195-0.60223 0.38802-0.9176 0.97021-0.9176 1.6923 0 0.47388 0.10097 0.87788 0.31138 1.201a0.13889 0.13889 0 0 0 8.33e-4 0.0014c0.21148 0.31758 0.50249 0.55755 0.862 0.71309a0.13889 0.13889 0 0 0 5.56e-4 2.77e-4c0.36127 0.1543 0.7703 0.22974 1.2236 0.22974 0.42523 0 0.7877-0.04198 1.0898-0.13046a0.13889 0.13889 0 0 0 0.0011-2.78e-4c0.30308-0.09179 0.5728-0.22642 0.80585-0.40387a0.13889 0.13889 0 0 0 0.0014-0.0011c0.17647-0.13774 0.34084-0.31992 0.5045-0.50477l0.16735 0.80504a0.13889 0.13889 0 0 0 0.13589 0.11066h0.79473a0.13889 0.13889 0 0 0 0.13887-0.13887v-4.6574c0-0.82827-0.21703-1.4606-0.67077-1.8607-0.45151-0.39809-1.1254-0.58506-2.0034-0.58506zm8.3739 0.11555c-0.33637 0-0.65847 0.04584-0.96507 0.13725-0.30676 0.08729-0.58617 0.21871-0.83541 0.39438l-2.78e-4 2.78e-4c-0.18132 0.12485-0.33217 0.28022-0.46789 0.44944l-0.12287-0.73994a0.13889 0.13889 0 0 0-0.13698-0.11609h-0.88017a0.13889 0.13889 0 0 0-0.13887 0.13887v6.8515a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0904a0.13889 0.13889 0 0 0 0.13887-0.13887v-3.5885c0-0.79851 0.15937-1.3899 0.45785-1.7853 0.29105-0.38558 0.79853-0.58886 1.5705-0.58886 0.5416 0 0.91592 0.13351 1.1541 0.38218a0.13889 0.13889 0 0 0 8.34e-4 8.33e-4c0.24335 0.25001 0.37458 0.63619 0.37458 1.1848v4.3949a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0771a0.13889 0.13889 0 0 0 0.13887-0.13887v-4.4635c0-0.90204-0.22654-1.5853-0.70196-2.0156l-2.78e-4 -2.78e-4c-0.47104-0.43024-1.1557-0.63632-2.031-0.63632zm15.529 0.01301c-0.70623 0-1.3248 0.14393-1.8477 0.43642-0.51843 0.2883-0.92067 0.71376-1.1989 1.2651-0.2791 0.54887-0.41554 1.2089-0.41554 1.9754 0 0.57556 0.08047 1.094 0.24438 1.5534a0.13889 0.13889 0 0 0 2.78e-4 0.0011c0.16765 0.45715 0.40313 0.8477 0.7063 1.1669a0.13889 0.13889 0 0 0 5.55e-4 5.42e-4c0.30657 0.31793 0.66998 0.56312 1.0855 0.73262a0.13889 0.13889 0 0 0 0.0016 8.19e-4c0.42039 0.16527 0.88076 0.2471 1.3776 0.2471 0.53086 0 1.0105-0.08154 1.4362-0.2471a0.13889 0.13889 0 0 0 5.56e-4 -2.78e-4c0.42884-0.16935 0.7973-0.41459 1.1004-0.7337 0.30364-0.31966 0.53522-0.71104 0.6941-1.169 0.15924-0.45904 0.23733-0.97709 0.23733-1.5523 0-0.7631-0.14119-1.422-0.42964-1.9711-0.2825-0.55023-0.68628-0.977-1.2038-1.2691l-2.78e-4 -2.78e-4c-0.51348-0.29233-1.1127-0.43644-1.7891-0.43644zm-30.312 0.11229a0.13889 0.13889 0 0 0-0.13887 0.13887v7.9579c0 0.39633-0.08928 0.63821-0.22757 0.7573-0.15579 0.13416-0.35885 0.20397-0.63198 0.20397-0.16857 0-0.31813-0.01202-0.44836-0.03526a0.13889 0.13889 0 0 0-0.0041-8.19e-4c-0.13329-0.01982-0.2645-0.04934-0.39357-0.08897a0.13889 0.13889 0 0 0-0.17956 0.13265v0.84409a0.13889 0.13889 0 0 0 0.09412 0.13128c0.13091 0.0445 0.28194 0.08142 0.45297 0.11148 0.17782 0.03548 0.38059 0.05235 0.61002 0.05235 0.46302 0 0.85469-0.08183 1.1701-0.25469 0.3129-0.17147 0.55085-0.42548 0.70251-0.74997v-2.78e-4c0.15084-0.31864 0.2235-0.69585 0.2235-1.1281v-7.9329a0.13889 0.13889 0 0 0-0.13887-0.13887zm22.288 0.7809c0.49807 0 0.85079 0.12149 1.0855 0.34854a0.13889 0.13889 0 0 0 8.33e-4 8.33e-4c0.23334 0.2221 0.35749 0.56119 0.35749 1.0497 0 0.45389-0.12037 0.77378-0.35098 0.99327-0.22952 0.21846-0.58097 0.33688-1.0798 0.33688-0.48054 0-0.8284-0.11716-1.0684-0.33823-0.23979-0.22087-0.36237-0.53334-0.36237-0.9732 0-0.48413 0.124-0.82643 0.35912-1.0576 0.24112-0.2369 0.58423-0.3602 1.0586-0.3602zm-27.946 0.23435c0.77432 0 1.2668 0.21684 1.5385 0.6366a0.13889 0.13889 0 0 0 5.55e-4 8.33e-4c0.28475 0.43364 0.43696 1.0759 0.43696 1.9307v0.18743c0 0.80301-0.15771 1.3902-0.45053 1.772-0.28682 0.37396-0.77984 0.57068-1.5254 0.57068-0.64244 0-1.0911-0.20747-1.3977-0.62927l-2.777e-4 -5.41e-4 -2.778e-4 -2.78e-4c-0.3046-0.4257-0.46599-1.0455-0.46599-1.8688 0-0.82782 0.16325-1.4656 0.47494-1.9223a0.13889 0.13889 0 0 0 2.777e-4 -5.56e-4c0.30853-0.45595 0.75305-0.67647 1.389-0.67647zm35.944 0.02522c0.48817 0 0.87228 0.10355 1.1636 0.30108 0.2953 0.20021 0.51277 0.48229 0.65748 0.8601a0.13889 0.13889 0 0 0 2.78e-4 5.56e-4c0.14551 0.37592 0.22052 0.82949 0.22052 1.3624 0 0.5372-0.07521 0.99776-0.22106 1.3825-0.14473 0.38178-0.36414 0.66789-0.66399 0.8723a0.13889 0.13889 0 0 0-8.33e-4 5.42e-4c-0.29181 0.20165-0.67054 0.3065-1.1492 0.3065-0.48325 0-0.86447-0.10503-1.156-0.3065-0.29558-0.20426-0.51341-0.49067-0.6583-0.87284-0.14583-0.38469-0.22079-0.84525-0.22079-1.3825 0-0.81383 0.16908-1.4343 0.49148-1.8737l2.78e-4 -2.77e-4c1.15e-4 -1.39e-4 1.25e-4 -4.17e-4 2.78e-4 -5.56e-4 0.32204-0.43241 0.8171-0.64962 1.5363-0.64962zm-22.558 2.5903v0.48714c0 0.64723-0.18846 1.1035-0.56065 1.4121-0.37972 0.31478-0.86612 0.4744-1.481 0.4744-0.39053 0-0.68816-0.08786-0.90838-0.25334-0.21244-0.15963-0.31898-0.39583-0.31898-0.75811 0-0.41227 0.15488-0.70432 0.49013-0.92845 0.3268-0.21848 0.94031-0.36257 1.826-0.39547a0.13889 0.13889 0 0 0 2.78e-4 0zm13.988 3.2264h1.248c0.36148 0 0.66413 0.02513 0.90567 0.07269a0.13889 0.13889 0 0 0 0.0022 2.78e-4c0.23377 0.0422 0.39573 0.1234 0.50152 0.23381 0.10044 0.10887 0.15922 0.2771 0.15922 0.52946 0 0.26513-0.08309 0.47968-0.25822 0.6686a0.13889 0.13889 0 0 0-0.0022 0.0022c-0.16934 0.19048-0.43734 0.34472-0.81453 0.45243a0.13889 0.13889 0 0 0-0.0016 5.41e-4c-0.37108 0.11112-0.85142 0.16925-1.4378 0.16925-0.59369 0-1.0385-0.09793-1.3345-0.27449a0.13889 0.13889 0 0 0-0.0011-5.42e-4c-0.29471-0.17205-0.42367-0.394-0.42367-0.72394 0-0.25778 0.05731-0.46077 0.166-0.62168 0.1148-0.16343 0.2755-0.28721 0.49501-0.37458 0.22094-0.08794 0.48577-0.13399 0.79609-0.13399zm18.12 51.362c-0.50654 0-0.94477 0.08819-1.3101 0.27097-0.36779 0.18401-0.65235 0.4761-0.84355 0.862v2.78e-4l-2.78e-4 2.78e-4c-0.19266 0.38491-0.28372 0.87264-0.28372 1.462v0.35017l-1.1712 0.31599a0.13889 0.13889 0 0 0-0.1028 0.13426v0.49989a0.13889 0.13889 0 0 0 0.13887 0.13887h1.1351v5.9a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0904a0.13889 0.13889 0 0 0 0.13887-0.13887v-5.9h1.654a0.13889 0.13889 0 0 0 0.13887-0.13887v-0.81263a0.13889 0.13889 0 0 0-0.13887-0.13887h-1.654v-0.36129c0-0.52908 0.0987-0.89891 0.26609-1.1151l2.78e-4 -2.77e-4c0.17288-0.22158 0.42938-0.33362 0.81643-0.33362 0.18266 0 0.36037 0.01949 0.53407 0.05886a0.13889 0.13889 0 0 0 0.0035 8.33e-4c0.18445 0.03674 0.34863 0.07763 0.49203 0.12179a0.13889 0.13889 0 0 0 0.17224-0.08734l0.28236-0.81914a0.13889 0.13889 0 0 0-0.08734-0.17685c-0.182-0.06063-0.39104-0.11414-0.62737-0.16084-0.23837-0.04799-0.49928-0.07133-0.78279-0.07133zm61.107 0.06862a0.13889 0.13889 0 0 0-0.13887 0.13887v9.7271a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0839a0.13889 0.13889 0 0 0 0.13887-0.13887v-2.4186l0.71553-0.62493 2.4514 3.1293a0.13889 0.13889 0 0 0 0.10931 0.05316h1.3136a0.13889 0.13889 0 0 0 0.10903-0.22513l-3.0303-3.8293 2.8098-2.8382a0.13889 0.13889 0 0 0-0.0987-0.23652h-1.2808a0.13889 0.13889 0 0 0-0.099 0.0415l-2.3907 2.4254a0.13889 0.13889 0 0 0-2e-3 0.0019c-0.12549 0.13224-0.27804 0.30476-0.45867 0.51861a0.13889 0.13889 0 0 0-1e-3 0.0014c-0.0797 0.09676-0.11961 0.1436-0.182 0.21862 5e-3 -0.09255 8e-3 -0.17016 0.0141-0.27286a0.13889 0.13889 0 0 0 0-2.78e-4c0.0132-0.24341 0.0201-0.44965 0.0201-0.62005v-5.051a0.13889 0.13889 0 0 0-0.13887-0.13887zm-29.917 2.6226c-0.66463 0-1.2529 0.1519-1.7538 0.45812a0.13889 0.13889 0 0 0-5.42e-4 2.78e-4c-0.49581 0.30587-0.88276 0.7455-1.1555 1.3079a0.13889 0.13889 0 0 0 0 2.78e-4c-0.26907 0.55994-0.40143 1.2191-0.40143 1.973 0 0.7718 0.14588 1.4338 0.44402 1.9795 0.29656 0.54282 0.71688 0.96104 1.2523 1.2442a0.13889 0.13889 0 0 0 0.0011 5.55e-4c0.53914 0.27833 1.1668 0.41554 1.8764 0.41554 0.49264 0 0.92149-0.03555 1.2881-0.10877 0.36912-0.07284 0.7395-0.18848 1.111-0.3461a0.13889 0.13889 0 0 0 0.08463-0.12802v-0.91244a0.13889 0.13889 0 0 0-0.19149-0.12857c-0.37029 0.15163-0.72658 0.26584-1.0684 0.34312-0.33767 0.07633-0.73039 0.11528-1.1777 0.11528-0.71364 0-1.2429-0.1984-1.6209-0.58913-0.3527-0.36458-0.54522-0.8966-0.57991-1.6025h4.8212a0.13889 0.13889 0 0 0 0.13887-0.13887v-0.64392c0-0.63826-0.1194-1.2028-0.36265-1.6876v5.56e-4c-0.24302-0.48881-0.59853-0.87391-1.0586-1.1454-0.46229-0.2728-1.0142-0.40686-1.6467-0.40686zm18.799 0c-0.70623 0-1.325 0.14392-1.848 0.43642-0.51846 0.28828-0.92063 0.71369-1.1989 1.2651-0.27911 0.54889-0.41554 1.2092-0.41554 1.9757 0 0.57561 0.0808 1.094 0.24466 1.5534a0.13889 0.13889 0 0 0 2.8e-4 0.0011c0.16765 0.45715 0.40313 0.84743 0.7063 1.1666a0.13889 0.13889 0 0 0 5.6e-4 8.33e-4c0.3066 0.31796 0.67002 0.56286 1.0855 0.73234a0.13889 0.13889 0 0 0 2e-3 5.55e-4c0.42037 0.16527 0.88049 0.24737 1.3774 0.24737 0.53085 0 1.0105-0.08153 1.4362-0.2471a0.13889 0.13889 0 0 0 5.6e-4 -2.78e-4c0.42877-0.16933 0.79751-0.41453 1.1007-0.7337 0.30367-0.31969 0.53497-0.71109 0.69383-1.169 0.15923-0.45899 0.23761-0.97677 0.23761-1.552 0-0.76313-0.14149-1.422-0.42992-1.9711-0.28248-0.5502-0.68599-0.97699-1.2035-1.2691l-2.8e-4 -2.78e-4c-0.51351-0.29231-1.1128-0.43669-1.7891-0.43669zm-39.097 0.01248c-0.47536 0-0.93002 0.05777-1.3627 0.17359-0.42747 0.11443-0.80802 0.25247-1.1416 0.41554a0.13889 0.13889 0 0 0-0.06672 0.17929l0.33498 0.78768a0.13889 0.13889 0 0 0 0.18607 0.07161c0.30048-0.13891 0.61816-0.25967 0.95394-0.3621 0.32787-0.10002 0.67317-0.15027 1.0369-0.15027 0.46341 0 0.80166 0.11167 1.0375 0.32142 0.22429 0.19948 0.35397 0.56938 0.35397 1.1403v0.28534l-1.1083 0.04476 0.0016-2.78e-4c-1.1786 0.03374-2.0681 0.23314-2.672 0.62222-0.60223 0.38802-0.9176 0.96994-0.9176 1.692 0 0.47393 0.10128 0.87793 0.31165 1.201a0.13889 0.13889 0 0 0 8.33e-4 0.0014c0.21145 0.31754 0.50219 0.55754 0.86172 0.71309a0.13889 0.13889 0 0 0 5.56e-4 2.78e-4c0.36127 0.15429 0.7703 0.23001 1.2236 0.23001 0.42523 0 0.7877-0.04225 1.0898-0.13074a0.13889 0.13889 0 0 0 0.0011-2.77e-4c0.30308-0.09179 0.5728-0.22642 0.80585-0.40387a0.13889 0.13889 0 0 0 0.0014-8.33e-4c0.17658-0.13782 0.34103-0.32032 0.50478-0.50532l0.16708 0.80531a0.13889 0.13889 0 0 0 0.13589 0.11067h0.79473a0.13889 0.13889 0 0 0 0.13887-0.13887v-4.6574c0-0.82828-0.21703-1.4606-0.67077-1.8607-0.45149-0.39807-1.1251-0.58479-2.0031-0.58479zm-5.1622 0.11555c-0.35845 0-0.68979 0.06604-0.9892 0.19963a0.13889 0.13889 0 0 0-5.56e-4 2.78e-4c-0.29022 0.13154-0.54777 0.31009-0.7695 0.53407-1.39e-4 1.38e-4 -1.18e-4 4.16e-4 -2.78e-4 5.55e-4 -0.14654 0.14535-0.25797 0.31747-0.37594 0.48443l-0.09059-0.96805a0.13889 0.13889 0 0 0-0.13833-0.12585h-0.90621a0.13889 0.13889 0 0 0-0.13887 0.13887v6.8515a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0966a0.13889 0.13889 0 0 0 0.13887-0.13887v-3.6758c0-0.3399 0.05268-0.64337 0.15542-0.91326a0.13889 0.13889 0 0 0 0-5.56e-4c0.10379-0.27662 0.24521-0.50788 0.42422-0.69762a0.13889 0.13889 0 0 0 0.0011-0.0011c0.18018-0.19489 0.38616-0.34086 0.62222-0.44158a0.13889 0.13889 0 0 0 8.34e-4 -2.78e-4c0.24096-0.10496 0.49476-0.15732 0.7657-0.15732 0.12086 0 0.25148 8e-3 0.3914 0.02414 0.13965 0.01611 0.26508 0.03815 0.37648 0.06564a0.13889 0.13889 0 0 0 0.17088-0.11528l0.13806-0.96262a0.13889 0.13889 0 0 0-0.10985-0.15596c-0.12934-0.02638-0.2747-0.04573-0.43642-0.05859h-8.34e-4c-0.16076-0.01687-0.31561-0.02522-0.46409-0.02522zm13.272 0c-0.31907 0-0.6223 0.04333-0.90784 0.13101-0.28562 0.08769-0.54574 0.21788-0.77764 0.39004-0.16471 0.12228-0.30261 0.27212-0.42774 0.43425l-0.12097-0.7147a0.13889 0.13889 0 0 0-0.13698-0.11555h-0.8799a0.13889 0.13889 0 0 0-0.13887 0.13887v6.8515a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0901a0.13889 0.13889 0 0 0 0.13887-0.13887v-3.6259c0-0.52632 0.0626-0.96328 0.18254-1.3101l2.78e-4 -2.77e-4c5.2e-5 -1.39e-4 -5.3e-5 -4.17e-4 0-5.56e-4 0.12312-0.34718 0.31326-0.59692 0.57502-0.76679 0.25969-0.16853 0.61445-0.25876 1.0736-0.25876 0.32002 0 0.57323 0.05948 0.76543 0.16925a0.13889 0.13889 0 0 0 0.0027 0.0014c0.19697 0.1066 0.33968 0.26284 0.43832 0.48443a0.13889 0.13889 0 0 0 8.19e-4 0.0019c0.10267 0.22175 0.15813 0.5102 0.15813 0.86688v4.4385a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0836a0.13889 0.13889 0 0 0 0.13887-0.13887v-3.8323c0-0.72645 0.15384-1.2565 0.44103-1.6057 0.28338-0.34465 0.73944-0.5243 1.4102-0.5243 0.46867 0 0.79361 0.12717 1.0128 0.37241a0.13889 0.13889 0 0 0 0.0016 0.0016c0.22243 0.24091 0.3442 0.61672 0.3442 1.1498v4.4385a0.13889 0.13889 0 0 0 0.13887 0.13887h1.0771a0.13889 0.13889 0 0 0 0.13887-0.13887v-4.4885c0-0.89208-0.20648-1.5657-0.64582-1.9933l-2.71e-4 -2.78e-4c-0.43529-0.42765-1.0745-0.63334-1.89-0.63334-0.50846 0-0.9809 0.10204-1.4115 0.30677-1.8e-4 8.7e-5 -3.61e-4 1.25e-4 -5.41e-4 2.78e-4 -1.81e-4 8.6e-5 -3.61e-4 1.27e-4 -5.42e-4 2.77e-4 -0.38647 0.18024-0.69141 0.4626-0.93225 0.81317-0.1809-0.34724-0.43438-0.63117-0.78334-0.811-0.39277-0.20879-0.87329-0.30948-1.4365-0.30948zm39.352 0c-0.35845 0-0.68979 0.06604-0.98921 0.19963a0.13889 0.13889 0 0 0-5.5e-4 2.78e-4c-0.29022 0.13154-0.54777 0.31009-0.76951 0.53407-1.3e-4 1.38e-4 -1.1e-4 4.16e-4 -2.7e-4 5.55e-4 -0.14644 0.14524-0.25794 0.31729-0.37594 0.48416l-0.0906-0.96778a0.13889 0.13889 0 0 0-0.13833-0.12585h-0.90648a0.13889 0.13889 0 0 0-0.13888 0.13887v6.8515a0.13889 0.13889 0 0 0 0.13888 0.13887h1.0969a0.13889 0.13889 0 0 0 0.13888-0.13887v-3.6758c0-0.3399 0.0527-0.64337 0.15542-0.91326a0.13889 0.13889 0 0 0 0-5.56e-4c0.10382-0.27669 0.24498-0.50793 0.42394-0.69762a0.13889 0.13889 0 0 0 1e-3 -0.0011c0.18014-0.19484 0.38641-0.34085 0.6225-0.44158a0.13889 0.13889 0 0 0 8.3e-4 -2.78e-4c0.24096-0.10496 0.49476-0.15732 0.7657-0.15732 0.12087 0 0.25119 8e-3 0.39113 0.02414 0.13968 0.01611 0.26541 0.03816 0.37675 0.06564a0.13889 0.13889 0 0 0 0.17088-0.11528l0.13806-0.96262a0.13889 0.13889 0 0 0-0.10985-0.15596c-0.12934-0.02638-0.2747-0.04573-0.43642-0.05859h-8.4e-4c-0.16075-0.01687-0.31561-0.02522-0.46409-0.02522zm-22.946 0.12531a0.13889 0.13889 0 0 0-0.13345 0.17739l1.9836 6.8515a0.13889 0.13889 0 0 0 0.13345 0.10036h1.2282a0.13889 0.13889 0 0 0 0.13155-0.09439l1.3391-3.9671 2.78e-4 -8.34e-4c0.06215-0.17329 0.11762-0.3447 0.16654-0.514a0.13889 0.13889 0 0 0 2.77e-4 -0.0011c0.0481-0.17064 0.09179-0.33272 0.13128-0.48714l8.34e-4 -0.0035c0.02952-0.10408 0.05195-0.19506 0.07567-0.28833 0.02464 0.093 0.0489 0.18354 0.07568 0.28833a0.13889 0.13889 0 0 0 0.0014 0.0046c0.04377 0.14999 0.08968 0.30815 0.13779 0.47467a0.13889 0.13889 0 0 0 0.0014 0.0041c0.05266 0.16291 0.10731 0.32997 0.16437 0.50125l1.2805 3.9872a0.13889 0.13889 0 0 0 0.13209 0.09629h1.2675a0.13889 0.13889 0 0 0 0.13345-0.10009l1.9901-6.8515a0.13889 0.13889 0 0 0-0.13345-0.17766h-1.1099a0.13889 0.13889 0 0 0-0.13372 0.10171l-1.0508 3.7821a0.13889 0.13889 0 0 0-2.78e-4 8.33e-4c-0.07014 0.2587-0.13819 0.51335-0.20397 0.76381a0.13889 0.13889 0 0 0-5.55e-4 0.0022c-0.05947 0.24259-0.1123 0.46356-0.15949 0.66725-0.05247-0.20356-0.11106-0.41305-0.1763-0.62846l-8.33e-4 -0.0024c-0.06148-0.21724-0.12525-0.4264-0.19122-0.62737l-2.78e-4 -8.34e-4 -1.2805-3.9628a0.13889 0.13889 0 0 0-0.13209-0.09602h-1.1755a0.13889 0.13889 0 0 0-0.13182 0.09493l-1.3266 3.9696a0.13889 0.13889 0 0 0 0 2.78e-4c-0.04877 0.14769-0.09759 0.30563-0.1462 0.47385-0.04847 0.16362-0.09478 0.32932-0.13887 0.49718a0.13889 0.13889 0 0 0-8.19e-4 0.0027c-0.02731 0.11264-0.05189 0.21576-0.07703 0.32033-0.0031-0.01378-0.0039-0.02289-0.0071-0.03689-0.04421-0.21845-0.09917-0.44869-0.16491-0.69084l-8.19e-4 -0.0027c-0.06138-0.2461-0.12682-0.49406-0.19692-0.74428l-2.78e-4 -5.55e-4 -1.0375-3.7816a0.13889 0.13889 0 0 0-0.13399-0.10199zm-4.2308 0.87447c0.3919 0 0.69955 0.08302 0.93442 0.2395a0.13889 0.13889 0 0 0 0.0014 8.33e-4c0.23887 0.15536 0.41419 0.37126 0.5319 0.66101a0.13889 0.13889 0 0 0 8.19e-4 0.0022c0.10722 0.25173 0.16208 0.5501 0.17929 0.8818h-3.4835c0.07975-0.54457 0.2531-0.97984 0.54383-1.2846 0.31904-0.33441 0.73835-0.5007 1.2919-0.5007zm18.786 0.02523c0.48817 0 0.87197 0.10352 1.1633 0.30108 0.2953 0.20021 0.51277 0.48229 0.65748 0.8601a0.13889 0.13889 0 0 0 2.8e-4 2.78e-4c0.14551 0.37591 0.22052 0.82976 0.22052 1.3627 0 0.53721-0.0752 0.99747-0.22106 1.3822-0.14473 0.38178-0.36415 0.66762-0.66399 0.87203a0.13889 0.13889 0 0 0-8.4e-4 5.56e-4c-0.29185 0.20168-0.67058 0.30704-1.1492 0.30704-0.4832 0-0.86414-0.10552-1.1558-0.30704-0.29561-0.20428-0.5137-0.49045-0.65857-0.87258-0.14584-0.38471-0.22078-0.84498-0.22078-1.3822 0-0.81383 0.16907-1.4343 0.49148-1.8737l2.8e-4 -2.78e-4c1.1e-4 -1.38e-4 1.3e-4 -4.16e-4 2.8e-4 -5.55e-4 0.32201-0.43239 0.81737-0.64962 1.5366-0.64961zm-37.751 2.7311v0.48687c0 0.64723-0.18846 1.1035-0.56065 1.4121-0.37972 0.31478-0.86612 0.4744-1.481 0.4744-0.39053 0-0.68785-0.08783-0.9081-0.25334-0.21248-0.15966-0.31925-0.39563-0.31925-0.75784 0-0.41227 0.15488-0.7046 0.49013-0.92872 0.3268-0.21848 0.94031-0.3623 1.826-0.3952a0.13889 0.13889 0 0 0 2.77e-4 -2.78e-4z" fill="#212121"/>
+                            </svg>
+                            <div class="text-3xl text-green-500">80%</div>
+                            <h1 class="pt-14 text-slate-200">Django Rest-framework</h1>  
+                        </div>
+                        <div id="flask"class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center flask'>
+                          <img class="w-24 h-28  mt-6  ml-7" src="https://img.icons8.com/nolan/64/flask.png" alt="flask"/>
+                          <div class="text-3xl text-green-500 relative bottom-3">80%</div>
+                          <h1 class="pt-14 text-slate-200">Flask</h1> 
+                        </div>
+                          
+                          <div id="react" class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center react'>
+                           <svg class="w-24 h-24 pl-7 mt-7 ml-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"/><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/></g></svg>
+                           <div class="text-3xl text-green-500 ">80%</div>
+                           <h1 class="pt-16 text-slate-200">React</h1> 
+                          </div>
+                        <div id="tailwind" class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center tailwind'>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 pl-7 mt-7 ml-4 " viewBox="0 0 128 128"><path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38bdf8"/></svg>
+                          <div class="text-3xl text-green-500 ">90%</div>
+                          <h1 class="pt-16 text-slate-200">Tailwind</h1> 
+                        </div>
+                        <div id="cp" class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center cp'>
+                          <svg viewBox="0 0 128 128" class="w-24 h-24 pl-7 mt-7 ml-4" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#00599c" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/>
+                            <path fill="#004482" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/>
+                            <path fill="#659ad2" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/>
+                            <path fill="#fff" d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91zM92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88zm15.766 0v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z"/>
+                          </svg>
+                          <div class="text-3xl text-green-500 ">90%</div>
+                          <h1 class="pt-16 text-slate-200">C++</h1> 
+                        </div>
+                        <div id="bootstrap" class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center bootstrap'>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 pl-7 mt-7 ml-4" viewBox="0 0 128 128"><defs><linearGradient id="a" x1="76.079" x2="523.48" y1="10.798" y2="365.95" gradientTransform="translate(1.11 14.613) scale(.24566)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9013fe"/><stop offset="1" stop-color="#6610f2"/></linearGradient><linearGradient id="b" x1="193.51" x2="293.51" y1="109.74" y2="278.87" gradientTransform="translate(0 52)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f1e5fc"/></linearGradient><filter id="c" class="w-20 h-20" x="161.9" y="135.46" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="4"/><feGaussianBlur stdDeviation="8"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter></defs><path fill="url(#a)" d="M14.985 27.712c-.237-6.815 5.072-13.099 12.249-13.099h73.54c7.177 0 12.486 6.284 12.249 13.099-.228 6.546.068 15.026 2.202 21.94 2.141 6.936 5.751 11.319 11.664 11.883v6.387c-5.913.564-9.523 4.947-11.664 11.883-2.134 6.914-2.43 15.394-2.202 21.94.237 6.815-5.072 13.098-12.249 13.098h-73.54c-7.177 0-12.486-6.284-12.249-13.098.228-6.546-.068-15.026-2.203-21.94-2.14-6.935-5.76-11.319-11.673-11.883v-6.387c5.913-.563 9.533-4.947 11.673-11.883 2.135-6.914 2.43-15.394 2.203-21.94z"/><path fill="url(#b)" d="M267.1 364.46c47.297 0 75.798-23.158 75.798-61.355 0-28.873-20.336-49.776-50.532-53.085v-1.203c22.185-3.609 39.594-24.211 39.594-47.219 0-32.783-25.882-54.138-65.322-54.138h-88.74v217zm-54.692-189.48h45.911c24.958 0 39.131 11.128 39.131 31.279 0 21.505-16.484 33.535-46.372 33.535h-38.67zm0 161.96v-71.431h45.602c32.661 0 49.608 12.03 49.608 35.49 0 23.459-16.484 35.941-47.605 35.941z" filter="url(#c)" transform="translate(1.494 2.203) scale(.24566)"/></svg>
+                          <div class="text-3xl text-green-500 ">80%</div>
+                          <h1 class="pt-16 text-slate-200">Bootstrap</h1> 
+                        </div>
+                        <div id="sql" class='border-2 h-52 w-40 hover:border-green-300 cursot-pointer rounded-full text-center sql'>
+                          
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-28 h-28 pl-2 mt-2 ml-4" viewBox="0 0 9.252 4.626"><g transform="matrix(.037376 0 0 .037376 1.069994 -1.319339)" fill-rule="evenodd"><path d="M8.504 128.215h5.8v-22.977l9.058 20.033c1.026 2.408 2.5 3.3 5.354 3.3s4.24-.893 5.3-3.3l9.013-20.033v22.977h5.845v-22.977c0-2.23-.893-3.303-2.767-3.883-4.417-1.338-7.362-.178-8.7 2.81l-8.878 19.81-8.567-19.81c-1.294-2.988-4.284-4.148-8.745-2.81-1.83.58-2.722 1.652-2.722 3.883l-.001 22.977zm45.198-18.694h5.845v12.627c-.044.713.223 2.32 3.4 2.363 1.65.045 12.582 0 12.67 0v-15.08h5.845v20.658c0 5.086-6.3 6.2-9.236 6.246h-18.38v-3.88h18.427c3.748-.402 3.302-2.275 3.302-2.9v-1.518h-12.36c-5.756-.045-9.46-2.588-9.503-5.488v-13.03zm125.374-14.635c-3.568-.09-6.336.268-8.656 1.25-.668.27-1.74.27-1.828 1.116.357.355.4.936.713 1.428.535.893 1.473 2.096 2.32 2.72.938.715 1.875 1.428 2.855 2.053 1.74 1.07 3.703 1.695 5.398 2.766.982.625 1.963 1.428 2.945 2.098.5.357.803.938 1.428 1.16v-.135c-.312-.4-.402-.98-.713-1.428-.447-.445-.893-.848-1.34-1.293-1.293-1.74-2.9-3.258-4.64-4.506-1.428-.982-4.55-2.32-5.13-3.97l-.088-.09c.98-.09 2.14-.447 3.078-.715 1.518-.4 2.9-.312 4.46-.713.715-.18 1.428-.402 2.143-.625v-.4c-.803-.803-1.383-1.874-2.23-2.632-2.275-1.963-4.775-3.882-7.363-5.488-1.383-.892-3.168-1.473-4.64-2.23-.537-.268-1.428-.402-1.74-.848-.805-.98-1.25-2.275-1.83-3.436-1.293-2.454-2.543-5.175-3.658-7.763-.803-1.74-1.295-3.48-2.275-5.086-4.596-7.585-9.594-12.18-17.268-16.687-1.65-.937-3.613-1.34-5.7-1.83l-3.346-.18c-.715-.312-1.428-1.16-2.053-1.562-2.543-1.606-9.102-5.086-10.977-.49-1.205 2.9 1.785 5.755 2.8 7.228.76 1.026 1.74 2.186 2.277 3.346.3.758.4 1.562.713 2.365.713 1.963 1.383 4.15 2.32 5.98.5.937 1.025 1.92 1.65 2.767.357.49.982.714 1.115 1.517-.625.893-.668 2.23-1.025 3.347-1.607 5.042-.982 11.288 1.293 14.99.715 1.115 2.4 3.57 4.686 2.632 2.008-.803 1.56-3.346 2.14-5.577.135-.535.045-.892.312-1.25v.09l1.83 3.703c1.383 2.186 3.793 4.462 5.8 5.98 1.07.803 1.918 2.187 3.256 2.677v-.135h-.088c-.268-.4-.67-.58-1.027-.892-.803-.803-1.695-1.785-2.32-2.677-1.873-2.498-3.523-5.265-4.996-8.12-.715-1.383-1.34-2.9-1.918-4.283-.27-.536-.27-1.34-.715-1.606-.67.98-1.65 1.83-2.143 3.034-.848 1.918-.936 4.283-1.248 6.737-.18.045-.1 0-.18.09-1.426-.356-1.918-1.83-2.453-3.078-1.338-3.168-1.562-8.254-.402-11.913.312-.937 1.652-3.882 1.117-4.774-.27-.848-1.16-1.338-1.652-2.008-.58-.848-1.203-1.918-1.605-2.855-1.07-2.5-1.605-5.265-2.766-7.764-.537-1.16-1.473-2.365-2.232-3.435-.848-1.205-1.783-2.053-2.453-3.48-.223-.49-.535-1.294-.178-1.83.088-.357.268-.49.623-.58.58-.49 2.232.134 2.812.4 1.65.67 3.033 1.294 4.416 2.23.625.446 1.295 1.294 2.098 1.518h.938c1.428.312 3.033.09 4.37.49 2.365.76 4.506 1.874 6.426 3.08 5.844 3.703 10.664 8.968 13.92 15.26.535 1.026.758 1.963 1.25 3.034.938 2.187 2.098 4.417 3.033 6.56.938 2.097 1.83 4.24 3.168 5.98.67.937 3.346 1.427 4.55 1.918.893.4 2.275.76 3.08 1.25 1.516.937 3.033 2.008 4.46 3.034.713.534 2.945 1.65 3.078 2.54zm-45.5-38.772a7.09 7.09 0 0 0-1.828.223v.09h.088c.357.714.982 1.205 1.428 1.83l1.027 2.142.088-.09c.625-.446.938-1.16.938-2.23-.268-.312-.312-.625-.535-.937-.268-.446-.848-.67-1.206-1.026z" fill="#00678c"/><path d="M85.916 128.215h16.776c1.963 0 3.838-.4 5.354-1.115 2.543-1.16 3.748-2.72 3.748-4.773v-4.283c0-1.65-1.383-3.213-4.148-4.283-1.428-.535-3.213-.848-4.953-.848h-7.05c-2.365 0-3.48-.715-3.793-2.275-.044-.178-.044-.357-.044-.535v-2.633c0-.135 0-.312.044-.49.312-1.205.937-1.518 3-1.74h17.177v-3.883h-16.33c-2.365 0-3.614.135-4.73.492-3.436 1.07-4.953 2.766-4.953 5.754v3.393c0 2.63 2.945 4.863 7.942 5.398.535.045 1.115.045 1.695.045h6.024c.223 0 .445 0 .623.045 1.83.178 2.633.49 3.168 1.158.357.357.447.67.447 1.072v3.39c0 .4-.268.938-.803 1.383s-1.385.758-2.5.803c-.223 0-.355.045-.58.045H85.916zm62.195-6.736c0 3.97 3 6.2 8.97 6.648.58.045 1.115.088 1.695.088h15.17v-3.88h-15.303c-3.393 0-4.686-.848-4.686-2.9v-20.078H148.1v20.123zm-32.615.177v-13.83c0-3.525 2.498-5.668 7.363-6.336.535-.045 1.07-.09 1.56-.09h11.064c.58 0 1.072.045 1.652.09 4.863.668 7.316 2.81 7.316 6.336v13.83c0 2.855-1.025 4.373-3.436 5.4l5.71 5.174h-6.736l-4.64-4.193-4.686.268h-6.246a13.66 13.66 0 0 1-3.391-.445c-3.7-1.028-5.53-2.99-5.53-6.204zm6.29-.31c0 .178.1.355.135.58.312 1.605 1.828 2.498 4.148 2.498h5.266l-4.818-4.373h6.736l4.238 3.838c.805-.447 1.295-1.072 1.473-1.875.045-.178.045-.4.045-.58v-13.252c0-.178 0-.355-.045-.535-.312-1.516-1.828-2.363-4.104-2.363h-8.79c-2.588 0-4.283 1.115-4.283 2.898z" fill="#ce8b2c"/></g></svg>
+                          <div class="text-3xl text-green-500 ">94%</div>
+                          <h1 class="pt-16 text-slate-200">MySQL</h1> 
+                        </div>
+            
+                    </div>
+                </div>
+            </section>
+
+          
+            <clickhide id="clickhide" class="clickbox m-10 hidden transition delay:1   ">
+                        
+                        
+              <img id="wideimg"class="lg:h-[600px] border-4 hover:ease-out"src="image/R.jpeg">
+              <back class="cursor-pointer border-1 lg:float-end float-end h-6 w-10 p-0.5 rounded-lg hover:text-green-400 position-absolute  bottom-100 hover:ease-in-out">Back</back>
+            </clickhide>
+
+             
+            <section id="project" class="opacity">
+             
+              
+                <div class='p-3 my-40'>
+                
+                    <div class="border-y h-8 rounded-full w-28 text-center text-slate-100 pt-1 text-sm flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 pl-2 pb-1">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
+                      </svg>PROJECTS</div>
+                      
+
+                      <div class="text-4xl  my-5">Featured <span class="text-green-400 shadow-xl bg-transparent">Projects</span></div>
+                   
+                      <!-- next image slide -->
+                      
+                      
+                      <!-- <div id="rightside" onclick="plusone(1)" class="border-y hover:bg-slate-600 opacity-5 h-[380px] w-40 relative  left-[650px]  "></div>
+
+                     
+                      <div id="leftside"onclick="plusone(-1)" class="border-y h-[380px] hover:bg-slate-400 opacity-5  w-40 right-[400px] "></div>
+                     -->
+                     
+                      
+                  <div class="">
+                      
+                    <div  class="slidebar border-y border-slate-950 rounded-3xl  h-[420px] w-auto" >
+                      <div id="rightside" onclick="plusone(1)" class="border-y  opacity-5 h-96 w-40 position-absolute lg:left-[658px]  left-96 sm:left-[500px] md:left-[600px] hover:bg-slate-400"></div>
+                        <img id="model" src="image/project/signup.png" class="w-full cursor-pointer shadow-lg h-full  rounded-3xl" alt="...">
+                        <div id="leftside"onclick="plusone(-1)" class="border-y h-[380px] hover:bg-slate-400 opacity-5  relative bottom-100 w-40  ">
+                          <!-- <div id="rightside" onclick="plusone(1)" class="border-y hover:bg-slate-600 opacity-5 h-[380px] w-40 relative  left-[650px]  "></div> -->
+                          
+                        
+                        </div>
+                      </div>
+                      <div  class="slidebar border-1 border-slate-950 rounded-xl  h-[420px] w-auto" >
+                        <div id="rightside" onclick="plusone(1)" class="border-y opacity-5 h-96 w-40 position-absolute lg:left-[658px] left-96 sm:left-[400px] md:left-[600px]  hover:bg-slate-400"></div>
+                        <img id="model" src="image/project/group.png" class="w-full cursor-pointer shadow-lg h-full object-center hover:object-top rounded-3xl" alt="...">
+                        <div id="leftside"onclick="plusone(-1)" class="border-y h-[380px] hover:bg-slate-400 opacity-5 relative bottom-100 w-40  ">
+                        
+                        </div>
+                      </div>
+                      <div  class="slidebar border-1 border-slate-950 rounded-xl  h-[420px] w-auto" >
+                        <div id="rightside" onclick="plusone(1)" class="border-y  opacity-5 h-96 w-40 position-absolute lg:left-[658px] left-96 sm:left-[400px] md:left-[600px]  hover:bg-slate-400"></div>
+                        <img id="model" src="image/project/post.png" class="w-full cursor-pointer shadow-lg h-full object-center hover:object-top rounded-3xl" alt="...">
+                        <div id="leftside"onclick="plusone(-1)" class="border-y h-[380px] hover:bg-slate-400 opacity-5 relative bottom-100 w-40  ">
+                        
+                        </div>
+                      </div>
+                      <ul>
+                      <li class="text-xl text-slate-300 font-bold">Social media clone we operate CRUD operations and nice user interface</li>
+                      <li class="text-xl text-slate-300 font-bold">We can create Groups for interest communities in their familiar topics</li>
+                      <li class="text-xl text-slate-300 font-bold">User can also Post individual group</li>
+                      <li class="text-xl text-slate-300 font-bold">Django and Bootstrap</li>
+                    </ul>
+
+
+                      
+                    
+                    
+                       
+                      
+                      
+                     <div class="flex lg:flex-nowrap min-[30px]:flex-wrap gap-4 ">
+                      <div id="proleft"class="border-1 h-96 w-auto rounded-3xl  border-[#1f1f1f] mt-20 proslideleft" >
+                        <img src="image/project/Ecom.png" class="card-img-top cursor-pointer rounded-3xl" alt="...">
+                        <div class="card-body">
+                          <ul>
+                            <li class="text-xl text-slate-300 font-bold">Ecomerse clone all things are add,delete in the Cart </li>
+                            <li class="text-xl text-slate-300 font-bold">Purchase and coockies used to store the detail guest.</li>
+                            <li class="text-xl text-slate-300 font-bold">Django, Bootstrap and embaded templates</li>
+                          </ul>
+                           <a href="#" class="btn btn-primary"></a>
+                        </div>
+                      </div>
+                      <div id="proright" class="border-1 h-96 rounded-3xl border-[#1f1f1f]  w-auto mt-20 proslideright">
+                        <img src="image/project/Notes.png" class="card-img-top cursor-pointer rounded-3xl" alt="...">
+                        <div class="card-body">
+                          <ul>
+                            <li class="text-xl text-slate-300 font-bold">Notes for taking any important information. </li>
+                            <li class="text-xl text-slate-300 font-bold">CRUD operation</li>
+                            <li class="text-xl text-slate-300 font-bold">React, Bootstrap and Django</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </section>
+            
+
+            <!-- contact -start -->
+            <section id="contact" class="reveal">
+                <div class=' p-3 my-40'>
+
+                    <div class="border-y h-8 rounded-full w-28 text-center text-slate-100 pt-1 text-sm flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 pl-2 pb-1">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                      </svg>CONTACT</div>
+
+                      <div class="text-5xl mt-10 shadow-md">Hello<span class="text-orange-400"> Guys!</span>Have Any Suggestion<br /> Please <span class="italic text-green-400">Inform Me</span></div>
+
+                      <h1 id="emailid" class="text-3xl mt-5 text-slate-300 drf">tarunmiri49@gmail.com</h1>
+
+                    <form class="flex flex-column gap-4 pt-20" method="POST" id="form-submit">
+                        
+                        <div class="">
+                          <h1  class=" text-slate-200 mb-2">Name</h1>
+                          <input style="border:none;" type="text" class="text-xl bg-[#1f1f1f]  w-[90%] " name="name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="">
+                          <h1 class=" text-slate-200 mb-2">Email</h1>
+                          <input style="border:none;" type="email" class="text-xl bg-[#1f1f1f] w-[90%] " name="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="">
+                          <h1 class=" text-slate-200 mb-2">Subject</h1>
+                          <input style="border:none;" type="text" class="text-xl bg-[#1f1f1f]  w-[90%]" name="subject" placeholder="Color,Design, ..." required>
+                        </div>
+                        <div class="">
+                          <h1 class=" text-slate-200 mb-2">Message</h1>
+                          <textarea style="border:none;" type="text"  class="text-xl bg-[#1f1f1f]  w-[90%]" name="message" placeholder="Write Your message here ..."></textarea>
+                          </div>
+                       
+                          
+                       
+                        <div class="">
+                          <button type="submit" class="hover:text-green-400 h-12 w-56 bg-[#28e98c] text-slate-900 rounded-full hover:border-green-400 border-1  py-2 px-4 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-slate-950  duration-300">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+            <!-- contact end -->
+        </hidebar>
+
+        </div>
+    </div>
+    
+  </div> <!-- show dive -->
+  
+
+    <script type="text/javascript">
+
+
+
+        var bar = document.getElementById('bar');
+        var about = document.getElementById('about');
+        var skills = document.getElementById('skills');
+        var project = document.getElementById('project');
+        var contact = document.getElementById('contact');
+
+bar.addEventListener('click',function(event) {
+
+    document.getElementById('sidebar').classList.remove('hidden');
+    document.getElementById('navdesk').classList.add('hidden');
+    bar.classList.add('hidden')
+    console.log(about.offsetTop)
+    
+
+
+})
+
+
+//slide    image
+var slideIndex =1;
+slideShow(slideIndex);
+function plusone(n){
+  slideShow(slideIndex+=n)
+}
+
+function slideShow(n){
+var slides = document.getElementsByClassName('slidebar')
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for(i=0;i<slides.length;i++){
+  slides[i].classList.add('hidden')
+}
+
+slides[slideIndex-1].classList.remove('hidden')
+
+}
+
+
+
+
+
+// var body = document.getElementById('hidebar');
+
+// body.addEventListener('click',function(event){
+//     document.getElementById('sidebar').classList.add('hidden');
+//     document.getElementById('navdesk').classList.remove('hidden');
+//     bar.classList.remove('hidden');
+//     console.log("click");
+    
+// })
+
+
+
+window.onscroll = function() {myFunction()};
+
+var off=159;
+function myFunction() {
+
+  var re = document.getElementById('about');
+  var skills = document.getElementById('skills')
+  var rect = re.getBoundingClientRect();
+  // console.log(rect.bottom)
+  // console.log(window.scrollY)
+  if(window.scrollY > skills.offsetTop-400 ){
+    document.getElementById('skills').classList.add('active')
+    document.getElementById('skills').classList.add('reveal')
+    document.getElementById('python').classList.remove('python')
+    document.getElementById('python').classList.add('apython')
+    document.getElementById('django').classList.remove('django')
+    document.getElementById('django').classList.add('adjango')
+    document.getElementById('flask').classList.remove('flask')
+    document.getElementById('flask').classList.add('aflask')
+    document.getElementById('drf').classList.remove('drf')
+    document.getElementById('drf').classList.add('adrf')
+    
+    
+
+  }else if(window.scrollY <870 &&  rect.bottom>100){
+    document.getElementById('skills').classList.remove('active')
+    document.getElementById('skills').classList.add('reveal')
+    document.getElementById('python').classList.add('python')
+    document.getElementById('django').classList.add('django')
+    document.getElementById('flask').classList.add('flask')
+    document.getElementById('drf').classList.add('drf')
+    
+
+
+    document.getElementById('python').classList.remove('apython')
+    document.getElementById('django').classList.remove('adjango')
+    document.getElementById('flask').classList.remove('aflask')
+    document.getElementById('drf').classList.remove('adrf')
+    
+  }
+
+  if(window.scrollY >940 &&  rect.bottom<40){
+   
+    document.getElementById('react').classList.remove('react')
+    document.getElementById('react').classList.add('areact')
+    document.getElementById('tailwind').classList.remove('tailwind')
+    document.getElementById('tailwind').classList.add('atailwind')
+    document.getElementById('cp').classList.remove('cp')
+    document.getElementById('cp').classList.add('acp')
+    document.getElementById('bootstrap').classList.remove('bootstrap')
+    document.getElementById('bootstrap').classList.add('abootstrap')
+    document.getElementById('sql').classList.remove('sql')
+    document.getElementById('sql').classList.add('asql')
+    
+    
+
+  }
+  else if(window.scrollY <940 &&  rect.bottom>40){
+   
+   document.getElementById('react').classList.add('react')
+   document.getElementById('react').classList.remove('areact')
+   document.getElementById('tailwind').classList.add('tailwind')
+   document.getElementById('tailwind').classList.remove('atailwind')
+   document.getElementById('cp').classList.add('cp')
+   document.getElementById('cp').classList.remove('acp')
+   document.getElementById('bootstrap').classList.add('bootstrap')
+   document.getElementById('bootstrap').classList.remove('abootstrap')
+   document.getElementById('sql').classList.add('sql')
+   document.getElementById('sql').classList.remove('asql')
+   
+   
+
+ }
+
+//project slide image
+ var pro = document.getElementById('skills');
+ var offpro = document.getElementById('project');
+  var proj = pro.getBoundingClientRect();
+  // console.log(proj.bottom)
+  // console.log(window.scrollY)
+  // console.log(offpro.offsetTop)
+
+
+  if(window.scrollY>offpro.offsetTop-500 && proj.bottom<250){
+    document.getElementById('project').classList.add('active')
+    document.getElementById('project').classList.remove('reveal')
+    
+  }
+  
+  else if(window.scrollY<offpro.offsetTop && proj.bottom>100){
+    document.getElementById('project').classList.remove('active')
+    document.getElementById('project').classList.add('reveal')
+  }
+
+
+  if(window.scrollY-100>offpro.offsetTop ){
+    document.getElementById('proleft').classList.add('aproslideleft')
+    document.getElementById('proleft').classList.remove('proslideleft')
+    document.getElementById('proright').classList.add('aproslideright')
+    document.getElementById('proright').classList.remove('proslideright')
+    
+  }
+  
+  else if(window.scrollY-100<offpro.offsetTop){
+    document.getElementById('proright').classList.remove('aproslideright')
+    document.getElementById('proright').classList.add('proslideright')
+    document.getElementById('proleft').classList.add('proslideleft')
+    document.getElementById('proleft').classList.remove('aproslideleft')
+  }
+
+  //end project slide image
+
+
+  //contact sliding animation
+
+  var con = document.getElementById('project')
+  var conoff =document.getElementById('contact')
+  var conact = con.getBoundingClientRect();
+  console.log(conact.bottom)
+  console.log(conoff.offsetTop)
+  console.log(window.scrollY)
+  if(conact.bottom<400 && window.scrollY>conoff.offsetTop-600){
+    document.getElementById('contact').classList.add('active')
+    document.getElementById('contact').classList.remove('reveal')
+    
+    
+
+
+  }
+  else if(conact.bottom>600 ){
+    document.getElementById('contact').classList.remove('active')
+    document.getElementById('contact').classList.add('reveal')
+    
+
+
+  }
+  if(conact.bottom<300 && window.scrollY>conoff.offsetTop-500){
+    
+    document.getElementById('emailid').classList.remove('drf')
+    document.getElementById('emailid').classList.add('adrf')}
+    else if(conact.bottom>300){
+      document.getElementById('emailid').classList.add('drf')
+    document.getElementById('emailid').classList.remove('adrf')
+    }
+
+  //end of contact sliding animation
+
+  
+
+    
+
+    if(window.innerWidth>1024){
+    if (window.scrollY < about.offsetTop ) {
+        document.getElementsByTagName("a")[0].style = "color:white";
+        document.getElementsByTagName("a")[5].style = "color:green";
+        for(let i=6;i<10;i++){
+            document.getElementsByTagName("a")[i].style = "color:#94a3b8";
+        }
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+        
+        
+      }
+      if (window.scrollY > about.offsetTop && window.screenY<skills.offsetTop) {
+        document.getElementsByTagName("a")[1].style = "color:white";
+        document.getElementsByTagName("a")[6].style = "color:green";
+        document.getElementsByTagName("a")[7].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[8].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[9].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+        
+        
+      }//if (window.scrollY > 997 && window.screenY<1836) 
+      if (window.scrollY > skills.offsetTop-100 && window.scrollY< project.offsetTop) {
+        document.getElementsByTagName("a")[2].style = "color:white";
+        document.getElementsByTagName("a")[7].style = "color:green";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[6].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[8].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[9].style = "color:#94a3b8";
+        
+        
+      }
+      if (window.scrollY > project.offsetTop && window.scrollY< contact.offsetTop) {
+        document.getElementsByTagName("a")[3].style = "color:white";
+        document.getElementsByTagName("a")[8].style = "color:green";
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+         
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[6].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[7].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[9].style = "color:#94a3b8";
+        
+        
+        
+      }
+      if (window.scrollY > contact.offsetTop-6) {
+        document.getElementsByTagName("a")[4].style = "color:white";
+        document.getElementsByTagName("a")[9].style = "color:green";
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[6].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[8].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[7].style = "color:#94a3b8";
+         
+        
+      }}
+
+      //mobile and tablet
+
+      else{
+        if (window.scrollY < about.offsetTop ) {
+            document.getElementsByTagName("a")[0].style = "color:white";
+        document.getElementsByTagName("a")[5].style = "color:green";
+        for(let i=6;i<10;i++){
+            document.getElementsByTagName("a")[i].style = "color:#94a3b8";
+        }
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+        
+        
+      }
+      if (window.scrollY >= about.offsetTop-10 && window.screenY<skills.offsetTop-9) {
+        document.getElementsByTagName("a")[1].style = "color:white";
+        document.getElementsByTagName("a")[6].style = "color:green";
+        document.getElementsByTagName("a")[7].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[8].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[9].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+        
+        
+      }//if (window.scrollY > 997 && window.screenY<1836) 
+      if (window.scrollY >= skills.offsetTop && window.scrollY< project.offsetTop-7) {
+        document.getElementsByTagName("a")[2].style = "color:white";
+        document.getElementsByTagName("a")[7].style = "color:green";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[6].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[8].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[9].style = "color:#94a3b8";
+        
+        
+      }
+      if (window.scrollY >= project.offsetTop-10 && window.scrollY< contact.offsetTop-6) {
+        document.getElementsByTagName("a")[3].style = "color:white";
+        document.getElementsByTagName("a")[8].style = "color:green";
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[4].style = "color:#94a3b8";
+         
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[6].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[7].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[9].style = "color:#94a3b8";
+        
+        
+        
+      }
+      if (window.scrollY >= contact.offsetTop-6) {
+        document.getElementsByTagName("a")[4].style = "color:white";
+        document.getElementsByTagName("a")[9].style = "color:green";
+        document.getElementsByTagName("a")[2].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[3].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[1].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[0].style = "color:#94a3b8";
+
+        document.getElementsByTagName("a")[5].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[6].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[8].style = "color:#94a3b8";
+        document.getElementsByTagName("a")[7].style = "color:#94a3b8";
+         
+        
+      }}
+      }
+    </script>
+
+
+    <!-- From submition -->
+
+    <script type="text/javascript">
+
+      var form = document.getElementById('form-submit');
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        dataSend();
+        console.log('submit clicked!')
+
+
+      })
+
+      function dataSend(){
+        var userInfo = {
+          'name':form.name.value,
+          'email':form.email.value,
+          'subject':form.subject.value,
+          'message':form.message.value,
+
+
+        }
+
+        
+        var url = 'http://127.0.0.1:8000/create_user/';
+
+		fetch(url,{
+				method:'Post',
+				headers:{
+					'Content-Type':'application/json',
+            		'X-CSRFToken': csrftoken,
+				},
+				body:JSON.stringify({
+					'form':userInfo,
+				})})
+				.then((response) => 
+						response.json()
+				)
+				.then((data) =>{
+					console.log('hello',data)
+					
+					 window.location.href = 'C:/Users/91797/Desktop/portpholio/portpholio/success.html'
+// 
+				})
+	
+
+	
+
+
+      }
+
+    </script>
+
+
+
+
+    </body>
+
+</html>
+

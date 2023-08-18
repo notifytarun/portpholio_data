@@ -1,0 +1,329 @@
+// landing page animation css --
+
+
+#dot{
+  
+  width: 150px;
+  padding-left: 45%;
+  padding-top: 400px;
+  animation-duration: 8s;
+  
+  
+  border-bottom: 2px solid whitesmoke;
+}
+//end of landing page animation css--
+
+.opacity{
+  opacity:0;
+}
+li:hover svg{
+  fill:#28e98c;
+}
+
+
+.reveal{
+    position: relative;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+.active{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+
+.python{
+    transform: translateX(-400px);
+    opacity: 0.1;
+    transition: 1s all ease;
+
+    
+  }
+
+
+.django{
+    transform: translateY(-100px);
+    opacity: 0.1;
+    transition: 1s all ease;
+    margin-left:600px;
+  }
+
+.apython{
+    transform: translateX(0px);
+    opacity: 1;
+    transition: 1s all ease;
+    
+  }
+
+
+.adjango{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+
+.drf{
+    transform: translateY(200px);
+    opacity: 0.1;
+    transition: 1s all ease;
+
+    margin-left:00px
+  }
+
+
+.adrf{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+.flask{
+    transform: translateX(1000px);
+    opacity: 0.1;
+    transition: 1s all ease;
+  }
+
+
+.aflask{
+    transform: translateX(0px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+//second row
+.react{
+    transform: translateX(-400px);
+    opacity: 0.1;
+    transition: 1s all ease;
+
+    
+  }
+
+
+.tailwind{
+    transform: translateY(-400px);
+    opacity: 0.0;
+    transition: 1s all ease;
+    
+  }
+
+.areact{
+    transform: translateX(0px);
+    opacity: 1;
+    transition: 1s all ease;
+    
+  }
+
+
+.atailwind{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+
+.cp{
+    transform: translateY(400px);
+    opacity: 0.1;
+    transition: 1s all ease;
+
+    margin-left:600px
+  }
+
+
+.acp{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+.bootstrap{
+    transform: translateX(1000px);
+    opacity: 0.1;
+    transition: 1s all ease;
+  }
+
+
+.abootstrap{
+    transform: translateX(0px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+
+  .sql{
+    transform: translateX(-400px);
+    opacity: 0.1;
+    transition: 1s all ease;
+
+    margin-right:200px
+  }
+
+  .asql{
+    transform: translateX(0px);
+    opacity: 1;
+    transition: 1s all ease;
+    
+  }
+
+
+
+
+//scroll behavior
+
+
+.sidebar{
+    animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+.tarun{
+    animation-name:example;
+    animation-duration:6700s;
+    animation-iteration-count:infinite;
+    /* animation-fill-mode:backwards; */
+    border-radius:50%;
+    border:1px solid white;
+   
+}
+.profile{
+    text-align:center
+}
+
+@keyframes example{
+    from{rotate:0def;}
+    to{rotate:360000deg}
+}
+
+#home{
+    height:auto;
+}
+#about{
+    height:auto;
+}
+
+
+#skills{
+    height:auto;
+}
+#project{
+    height:auto;
+}
+#contact{
+    height:auto;
+}
+html {
+    scroll-behavior: smooth;
+    delay:10s;
+}
+//end scroll
+.profile-name{
+    display:flex;
+    
+    
+}
+@media (max-width: 754px) {
+
+    
+    .profile{
+        width:100%;
+
+        text-align:center;
+        height:auto;
+        
+        
+        
+        
+    }
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+@media (min-width: 754px) and (max-width: 1024px){
+.profile{
+    /* margin:auto; */
+    text-align:center;
+    width:754px;
+    margin:auto;
+    
+}
+.body{
+
+    width:754px;
+    margin:auto;
+}}
+/* The Modal (background) */
+.clickbox {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+     /* Sit on top */
+    
+   left:0;
+    top:0;
+    
+    width: 90%; /* Full width */
+    height: 70%; /* Full height */
+   /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+  }
+
+
+
+
+.proslideleft{
+   transform: translateX(-200px);
+    opacity: 0;
+    transition: 1s all ease;
+
+}
+
+.proslideright{
+  transform: translateX(200px);
+   opacity: 0;
+   transition: 1s all ease;
+
+}
+
+.aproslideleft{
+  transform: translateX(0px);
+   opacity: 1;
+   transition: 1s all ease;
+
+}
+
+.aproslideright{
+ transform: translateX(0px);
+  opacity: 1;
+  transition: 3s all ease;
+
+}
+
+//contact sliding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
